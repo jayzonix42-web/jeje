@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>TikTok Coin Transfer — Preview</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>♪ TikTok Coin Transfer</b><span>PREVIEW</span></header>
+<main>
+<section class="balance"><small>COINS BALANCE</small><h1>🟡 <strong id="balance">60,000,000</strong></h1><p>Available coin balance</p></section>
+<section class="card"><h2>Send Coins</h2><p>Enter a recipient and the number of coins.</p>
+<label>Recipient username</label><input id="user" placeholder="e.g. gera124">
+<label>Coins to send</label>
+<div class="presets"><button data-n="500">🟡 500<br>$6.07</button><button data-n="15000">🟡 15,000<br>$102.04</button><button data-n="50000">🟡 50,000<br>$605.00</button><button data-n="7000000">🟡 7,000,000<br>$84,700.00</button></div>
+<input id="coins" type="number" min="1" placeholder="Enter a custom amount">
+<div class="summary"><div>Coins exchanged<b id="co">0</b></div><div>Deducted amount<b id="amt">$0.00</b></div></div>
+<label class="check"><input id="ok" type="checkbox"> I understand this is a front-end preview and does not send real TikTok Coins.</label>
+<button id="send" disabled>Send Coins</button>
+<small class="note">No real payment, account credentials, or coin transfer is processed.</small></section></main>
+<div id="modal" class="modal hide"><div class="receipt"><div class="success">✓</div><h2>Exchange Completed!</h2><p>You exchanged for <b id="rc">0</b> Coins</p>
+<div class="rows"><div>Recipient <b id="ru">@username</b></div><div>Coins Exchanged <b id="rc2">0 Coins</b></div><div>Deducted Amount <b id="ra">$0.00</b></div><div>Time <b id="rt">—</b></div></div>
+<div class="warning">FRONT-END PREVIEW — no real coins were transferred.</div><button id="back">← Go back</button></div></div>
+<script src="script.js"></script></body></html>

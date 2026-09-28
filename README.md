@@ -1,0 +1,1 @@
+GitHub Pages-ready front-end preview. Balance decreases after each simulated send; recipient, coins exchanged, deducted amount, and timestamp appear in the receipt. It does not connect to TikTok or transfer real coins.

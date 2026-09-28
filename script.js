@@ -1,0 +1,5 @@
+const $=id=>document.getElementById(id);let balance=60000000;const rate=605/50000;
+function fmt(n){return Number(n).toLocaleString("en-US")}function money(n){return "$"+Number(n).toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2})}
+function update(){let n=+($("coins").value||0);$("co").textContent=fmt(n);$("amt").textContent=money(n*rate);$("send").disabled=!(n>0&&n<=balance&&$("user").value.trim()&&$("ok").checked)}
+document.querySelectorAll(".presets button").forEach(b=>b.onclick=()=>{$("coins").value=b.dataset.n;update()});["coins","user","ok"].forEach(x=>$(x).addEventListener("input",update));$("ok").onchange=update;
+$("send").onclick=()=>{let n=+$("coins").value,u=$("user").value.trim().replace(/^@/,"");if(!u||!n||n>balance)return;balance-=n;$("balance").textContent=fmt(balance);$("rc").textContent=fmt(n);$("ru").textContent="@"+u;$("rc2").textContent=fmt(n)+" Coins";$("ra").textContent=money(n*rate);$("rt").textContent=new Date().toLocaleString();$("modal").classList.remove("hide");$("coins").value="";$("ok").checked=false;update()};$("back").onclick=()=>$("modal").classList.add("hide");update();
